@@ -14,48 +14,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="loading">Loading...</div>
     <div class="container">
         <div class="searchBar">
             <h1>Enter City Name</h1>
-            <form>
-                <input type="text" placeholder="City Name...">
+            <form onsubmit="event.preventDefault(); getWeather();">
+                <input id="input" type="text" placeholder="City Name..." required>
                 <button type="submit">Get Weather!</button>
             </form>
         </div>
+        
         <div class="weatherInfo">
             <h3 class="location">Guwahati</h3>
             <div class="mainInfo">
                 <div class="description">
-                    <img src="https://openweathermap.org/img/wn/04d@2x.png" class="weatherImg">
+                    <img src="https://openweathermap.org/img/wn/04d@2x.png" id="weatherImg">
                     <h1 id="mainTemp">35°C</h1>
                 </div>
                 <div class="temperature">
                     <p id="weatherDescription">Cloudy</p>
-                    <p id="tempMaxMin">28°/35°</p>
+                    <p id="tempMaxMin">28°C/35°C</p>
                 </div>
             </div>
             <div class="otherInfo1 Info">
                 <div class="feelsLike">
                     <span class="material-symbols-outlined">device_thermostat</span>
                     <h3>Feels like</h3>
-                    <h2>46°C</h2>
+                    <h2 id="feelsLike">46°C</h2>
                 </div>
                 <div class="humidity">
                     <span class="material-symbols-outlined">humidity_percentage</span>
                     <h3>Humidity</h3>
-                    <h2>62%</h2>
+                    <h2 id="humidity">62%</h2>
                 </div>
             </div>
             <div class="otherInfo2 Info">
                 <div class="visibility">
                     <span class="material-symbols-outlined">visibility</span>
                     <h3>Visibility</h3>
-                    <h2>4 km</h2>
+                    <h2 id="visibility">4 km</h2>
                 </div>
                 <div class="pressure">
                     <span class="material-symbols-outlined">compare_arrows</span>
                     <h3>Pressure</h3>
-                    <h2>998 hPa</h2>
+                    <h2 id="pressure">998 hPa</h2>
                 </div>
             </div>
         </div>

@@ -87,7 +87,7 @@ body {
 }
 
 .weatherInfo {
-    display: block;
+    display: none;
     border: 3px solid white;
     border-radius: 20px;
     min-width: 600px;
@@ -202,4 +202,13 @@ body {
 
 .otherInfo2 {
     margin-bottom: 30px;
+}
+
+
+.loading {
+    display: none;
+    color: #F9FAFB;
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 80px;
+    padding: 20px 40px;
 }
