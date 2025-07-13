@@ -27,6 +27,9 @@ body {
     width: 100%;
     max-width: 600px;
     margin: auto;
+    box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.75);
+    -webkit-box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.75);
+    -moz-box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.75);
 }
 
 .searchBar h1{
