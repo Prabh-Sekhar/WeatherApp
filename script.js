@@ -37,7 +37,7 @@ async function getWeather() {
         document.querySelector('#mainTemp').innerHTML = `${temp}°C`;
         document.querySelector('#weatherImg').setAttribute('src', `https://openweathermap.org/img/wn/${icon}@2x.png`);
         document.querySelector('#weatherDescription').innerHTML = description;
-        document.querySelector('#tempMaxMin').innerHTML = `${tempMin}°C/${tempMax}`;
+        document.querySelector('#tempMaxMin').innerHTML = `${tempMin}°C/${tempMax}°C`;
         document.querySelector('#feelsLike').innerHTML = `${feelsLike}°C`;
         document.querySelector('#humidity').innerHTML = `${humidity}%`;
         document.querySelector('#visibility').innerHTML = `${visibility} km`;
