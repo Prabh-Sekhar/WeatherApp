@@ -2,10 +2,15 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #111827;
+    display: flex;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .container {
@@ -27,13 +32,22 @@ body {
     width: 100%;
     max-width: 600px;
     margin: auto;
+    margin-top: 200px;
     box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.75);
     -webkit-box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.75);
     -moz-box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.75);
+    transition: 0.3s ease 0s;
+}
+
+.searchBar:hover {
+    transform: scale(1.01);
+    box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.9);
+    -webkit-box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.9);
+    -moz-box-shadow: 10px 10px 50px -22px rgba(255,255,255,0.9);
 }
 
 .searchBar h1{
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(40px, 8vw, 70px);
     color: #F9FAFB;
     margin: 0px;
@@ -53,8 +67,8 @@ body {
     margin-top: 5px;
     margin-bottom: 30px;
     font-size: clamp(18px, 4vw, 25px);
-    font-family: 'Patrick Hand', sans-serif;
-    background-color: #1f2937;
+    font-family: 'Inter', sans-serif;
+    background-color: rgba(142, 97, 248, 0.7);
     border: none;
     color: white;
     width: 100%;
@@ -62,13 +76,11 @@ body {
 
 .searchBar form input::placeholder {
     font-size: clamp(18px, 4vw, 25px);
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #E5E7EB;
 }
 
 .searchBar form input:focus {
-    border: 3px solid #6366F1;
-    box-shadow: 0 0 8px rgba(99, 102, 241, 0.6);
     outline: none;
 }
 
@@ -83,7 +95,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: clamp(16px, 3vw, 20px);
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     transition: 0.2s ease 0s;
     background: linear-gradient(to right, #6366F1, #8B5CF6);
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.5);
@@ -97,18 +109,18 @@ body {
 
 .weatherInfo {
     display: none;
-    border: 3px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     width: 100%;
     max-width: 600px;
     margin: auto;
     margin-top: 30px;
-    color: #F9FAFB; 
-    background-color: #1f2937;  
+    color: #F9FAFB;   
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .weatherInfo .location {
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     padding: 20px 30px;
     font-size: clamp(24px, 5vw, 35px);
     margin: 0px;
@@ -158,13 +170,13 @@ body {
 }
 
 #weatherDescription {
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(14px, 3vw, 18px);
     text-align: center;
 }
 
 #tempMaxMin {
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(14px, 3vw, 18px);
     text-align: center;
 }
@@ -180,45 +192,43 @@ body {
 }
 
 .Info div {
-    border: 3px solid white;
-    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 10px 10px 35px -20px rgba(255,255,255,0.75);
-    -webkit-box-shadow: 10px 10px 35px -20px rgba(255,255,255,0.75);
-    -moz-box-shadow: 10px 10px 35px -20px rgba(255,255,255,0.75);
+    box-shadow: 10px 10px 35px -20px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 35px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 35px -20px rgba(0, 0, 0, 0.75);
     flex: 1;
     transition: 0.2s ease 0s;
-    background-color: #19252e;
     min-width: 140px;
     max-width: 300px;
+    background-color: rgba(118, 75, 162, 0.1);
 }
 
 .Info div:hover {
-    transform: scale(1.01);
+    transform: scale(1.03);
 }
 
 .Info div span {
-    font-size: clamp(30px, 6vw, 50px);
-    color: #FBBF24;
+    font-size: clamp(20px, 2vw, 50px);
 }
 
 .Info div h3 {
-    font-family: 'Patrick Hand', sans-serif;
-    font-size: clamp(18px, 4vw, 30px);
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(15px, 1vw, 30px);
     margin: 12px;
-    text-shadow: 1px 1px 14px rgba(206,206,206,0.51);
-    color: #93C5FD;
     text-align: center;
+    color: #ded0f2;
 }
 
 .Info div h2 {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
-    font-size: clamp(20px, 4vw, 30px);
+    font-size: clamp(20px, 2vw, 25px);
     text-align: center;
 }
 
@@ -229,7 +239,7 @@ body {
 .loading {
     display: none;
     color: #F9FAFB;
-    font-family: 'Patrick Hand', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(40px, 8vw, 80px);
     padding: 20px 40px;
     text-align: center;

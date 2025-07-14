@@ -23,6 +23,8 @@ async function getWeather() {
         document.querySelector('.weatherInfo').style.display = "block";
         const data = await response.json();
 
+        console.log(data);
+
         const temp = Math.round(data.main.temp);
         const icon = data.weather[0].icon;
         const description = data.weather[0].description;
